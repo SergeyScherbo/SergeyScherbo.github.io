@@ -22,7 +22,7 @@ $(function() {
             $('#email').val('');
             $('#message').val('');
         })
-        .fail(function(response) {
+        .fail(function(data) {
             $(formMessage).removeClass('success');
             $(formMessage).addClass('error');
 
