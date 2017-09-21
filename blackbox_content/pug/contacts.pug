@@ -1,0 +1,39 @@
+doctype html
+html(lang="ru")
+    include head.pug
+    body.animsition
+        .animsition-loading
+
+        include header.pug
+        
+        .content.contacts-page
+            .row
+                .contacts
+                    h1.head_lvl1.page-head Контакты
+                    ul.contacts-info
+                        li.contacts-info__el
+                            h3.info__header Адрес:
+                            p.info__text.text_lt 443093 г. Самара ул. Ново-Садовая д. 38 о. 9
+                        li.contacts-info__el
+                            h3.info__header E-mail:
+                            p.info__text.text_lt
+                                a(href='mailto:info@blackboxexpo.ru') info@blackboxexpo.ru
+                        li.contacts-info__el
+                            h3.info__header Телефон:
+                            p.info__text.text_lt +7 (927) 777-33-22
+                    .contacts-form
+                        p.text.text_big Оставьте ваши контакты, чтобы наш менеджер связался с вами в ближайшее время!
+                        form.form
+                            input.form__field(placeholder='Ваше имя')
+                            input.form__field(placeholder='Ваш телефон')
+                            textarea.form__field.form__field_ta(placeholder='Сообщение')
+                            button.btn
+                                span Отправить
+                                i.fa.fa-arrow-right
+                #map.map
+                
+
+
+
+        include footer.pug
+        script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAd7-MWvC-Wv-ds3IZ9v26KiQK9kjW5lRM&callback=initMap')

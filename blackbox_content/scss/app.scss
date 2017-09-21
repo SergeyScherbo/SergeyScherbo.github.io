@@ -1,0 +1,28 @@
+@import 'defaults';
+@import 'grid';
+@import 'typography';
+@import 'variables';
+@import 'placeholders';
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'buttons';
+@import 'home';
+@import 'about';
+@import 'services';
+@import 'gallery';
+@import 'contacts';
+
+
+.row {
+	@include row;
+}
+
+.animsition-loading {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $black;
+}

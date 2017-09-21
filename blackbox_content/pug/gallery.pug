@@ -1,0 +1,31 @@
+doctype html
+html(lang='ru')
+    include head.pug
+    link(rel='stylesheet', href='assets/magnific-popup/magnific-popup.css')
+    body.animsition
+        .animsition-loading
+
+        include header.pug
+            
+        .content
+            .row.page-head
+                h1.head_lvl1 Галерея работ
+            .row.gallery
+                a.gallery__el(href='img/img.jpg')
+                    img(src='img/img.jpg')
+                a.gallery__el(href='img/img2.jpg')
+                    img(src='img/img2.jpg')
+                a.gallery__el(href='img/img3.jpg')
+                    img(src='img/img3.jpg')
+                a.gallery__el(href='img/img4.jpg')
+                    img(src='img/img4.jpg')
+                a.gallery__el(href='img/img5.jpg')
+                    img(src='img/img5.jpg')
+                a.gallery__el(href='img/img6.jpg')
+                    img(src='img/img6.jpg')
+                a.gallery__el(href='img/img7.jpg')
+                    img(src='img/img7.jpg')
+                a.gallery__el(href='img/img8.jpg')
+                    img(src='img/img8.jpg')
+
+        include footer.pug

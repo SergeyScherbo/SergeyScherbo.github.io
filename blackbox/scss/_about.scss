@@ -1,0 +1,22 @@
+.about-img {
+    @include col(7);
+
+    img {
+        width: 100%;
+    }
+}
+
+.about-info {
+    @include col(5);
+}
+
+@media screen and (max-width: 1200px) {
+    .about-img,
+    .about-info {
+        @include col(12);
+    }
+
+    .about-img {
+        margin-bottom: 50px;
+    }
+}

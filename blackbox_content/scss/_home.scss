@@ -1,0 +1,100 @@
+.intro-outer {
+    @extend %tac;
+    height: calc(100vh - 117px);
+    line-height: calc(100vh - 117px);
+
+    .row {
+        @extend %tal;
+        @extend %ib;
+        vertical-align: middle;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-outer {
+        height: calc(100vh - 64px);
+        line-height: calc(100vh - 64px);
+    }
+}
+
+.intro,
+.cube-outer {
+    @include col(6, middle);
+}
+
+.intro {
+
+    &__head {
+        margin-bottom: 20px;
+    }
+}
+
+.cube-outer {
+    @extend %tac;
+    perspective: 1000px;
+
+    .cube {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        transform-origin: 50% 50% -100px;
+        transform-style: preserve-3d;
+        transform: rotate3d(1, 1, 1, 30deg);
+        animation: spin 10s infinite linear;
+    }
+    .side {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        font-size: 3rem;
+        color: #fff;
+        transform-origin: 50% 50% -100px;
+    }
+
+    .side2 {
+        transform: rotateY(90deg);
+        background-color: fade-out($black, .1);
+    }
+
+    .side3 {
+        transform: rotateY(-90deg);
+        background-color: fade-out($black, .2);
+    }
+
+    .side4 {
+        transform: rotateX(90deg);
+        background-color: fade-out($black, .3);
+    }
+
+    .side5 {
+        transform: rotateX(-90deg);
+        background-color: fade-out($black, .4);
+    }
+
+    .side6 {
+        transform: rotateY(180deg);
+        background-color: fade-out($black, .5);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        @include col(12);
+    }
+    .cube-outer {
+        @include hide;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate3d(1, 1, 1, 30deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 390deg);
+    }
+}

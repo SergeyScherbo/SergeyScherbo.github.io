@@ -1,0 +1,139 @@
+.general-header {
+	border-bottom: 1px solid fade-out(#000, .9);
+}
+
+.logo {
+	@include col(3, middle);
+	@include offset(8);
+
+	img {
+		height: 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.logo {
+		@include col(6, middle);
+		@include offset(3);
+	}
+}
+
+.navigation {
+    border-top: 1px solid fade-out($black, .9);
+    &__el {
+        @extend %ib;
+        font-size: 1.1428rem;
+        color: $text-lt;
+
+        a {
+            @extend %trs;
+            position: relative;
+            padding: 15px;
+            overflow: hidden;
+
+            &:after {
+                @extend %trs;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                height: 3px;
+                width: 100%;
+                background-color: $black;
+                transform: translateY(3px);
+            }
+
+            &:hover,
+			.cur-page {
+                color: $black;
+                &:after {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+	.navigation {
+		@include hide;
+	}
+}
+
+.main-modal {
+	@extend %trs;
+	position: absolute;
+	z-index: 999;
+	top: 117px;
+	left: 0;
+	height: calc(100vh - 117px);
+	width: 100%;
+	padding-top: 40px;
+	background-color: fade-out($black, .05);
+	opacity: 0;
+	visibility: hidden;
+	overflow-x: hidden;
+
+	&_show {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.mobile-nav {
+	display: none;
+	margin-bottom: 40px;
+
+	.main-modal__header {
+		padding: 0;
+		font-size: 3rem;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+
+	&__el {
+
+		a {
+			@extend %trs;
+			position: relative;
+			height: 40px;
+			line-height: 40px;
+			font-size: 1.1428rem;
+			color: lighten($text-lt, 20%);
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.main-search {
+	@include col(12);
+	padding-bottom: 10px;
+	border-bottom: 1px solid fade-out(#fff, .8);
+
+	input {
+		width: 100%;
+		font-size: 3rem;
+		font-weight: 700;
+		color: #fff;
+
+		&::placeholder {
+			font-family: 'Open Sans';
+			font-weight: 700;
+			color: #fff;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main-modal {
+		top: 64px;
+		height: calc(100vh - 64px);
+	}
+
+	.mobile-nav {
+		@include col(12);
+	}
+}

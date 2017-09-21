@@ -1,0 +1,51 @@
+.gallery {
+    &__el {
+        @include col(4);
+        padding: 0 2px;
+        height: 300px;
+        margin-bottom: 4px;
+        outline: none;
+
+        &:last-of-type,
+        &:nth-last-of-type(2),
+        &:nth-last-of-type(3) {
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery {
+        &__el {
+            @include col(6);
+            padding: 0 2px;
+
+            &:nth-last-of-type(3) {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        &__el {
+            @include col(12);
+            padding: 0 2px;
+
+            &:nth-of-type(n) {
+                margin-bottom: 4px;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

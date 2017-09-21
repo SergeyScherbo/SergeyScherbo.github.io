@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="animsition">
+    <div class="animsition-loading"></div>
+    <div class="general-header">
+      <div class="row"><a class="logo animsition-link" href="index.html"><img src="img/logo.png"></a>
+        <div class="search">
+          <button class="search__btn"></button>
+        </div>
+        <div class="mobile">
+          <button class="mobile__btn"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="navigation">
+          <li class="navigation__el"><a class="animsition-link" href="index.html">Главная</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="about.html">О компании</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="services.html">Наши услуги</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="#calendar">Календарь</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="gallery.html">Галерея</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="gallery.html">Клуб</a></li>
+          <li class="navigation__el"><a class="animsition-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-modal">
+      <div class="row">
+        <ul class="mobile-nav">
+          <h1 class="main-modal__header">Навигация</h1>
+          <li class="mobile-nav__el"><a href="index.html">Главная</a></li>
+          <li class="mobile-nav__el"><a href="about.html">О компании</a></li>
+          <li class="mobile-nav__el"><a href="services.html">Наши услуги</a></li>
+          <li class="mobile-nav__el"><a href="#calendar">Календарь</a></li>
+          <li class="mobile-nav__el"><a href="gallery.html">Галерея</a></li>
+          <li class="mobile-nav__el"><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <form class="main-search">
+          <input placeholder="Поиск">
+        </form>
+      </div>
+    </div>
+    <div class="content contacts-page">
+      <div class="row">
+        <div class="contacts">
+          <h1 class="head_lvl1 page-head">Контакты</h1>
+          <ul class="contacts-info">
+            <li class="contacts-info__el">
+              <h3 class="info__header">Адрес:</h3>
+              <p class="info__text text_lt">443093 г. Самара ул. Ново-Садовая д. 38 о. 9</p>
+            </li>
+            <li class="contacts-info__el">
+              <h3 class="info__header">E-mail:</h3>
+              <p class="info__text text_lt"><a href="mailto:info@blackboxexpo.ru">info@blackboxexpo.ru</a></p>
+            </li>
+            <li class="contacts-info__el">
+              <h3 class="info__header">Телефон:</h3>
+              <p class="info__text text_lt">+7 (927) 777-33-22</p>
+            </li>
+          </ul>
+          <div class="contacts-form">
+            <p class="text text_big">Оставьте ваши контакты, чтобы наш менеджер связался с вами в ближайшее время!</p>
+            <form class="form">
+              <input class="form__field" placeholder="Ваше имя">
+              <input class="form__field" placeholder="Ваш телефон">
+              <textarea class="form__field form__field_ta" placeholder="Сообщение"></textarea>
+              <button class="btn"><span>Отправить</span><i class="fa fa-arrow-right"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="map" id="map"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="row">
+        <div class="footer__col">
+          <div class="footer__col-in">
+            <h2 class="footer__head">Меню</h2>
+            <ul class="footer-nav">
+              <li class="footer-nav__el"><a class="animsition-link" href="index.html">Главная</a></li>
+              <li class="footer-nav__el"><a class="animsition-link" href="about.html">О компании</a></li>
+              <li class="footer-nav__el"><a class="animsition-link" href="services.html">Услуги</a></li>
+              <li class="footer-nav__el"><a class="animsition-link" href="#calendar">Календарь</a></li>
+              <li class="footer-nav__el"><a class="animsition-link" href="gallery.html">Галерея</a></li>
+              <li class="footer-nav__el"><a class="animsition-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-in">
+            <h2 class="footer__head">Контактная информация</h2>
+            <ul class="footer-contacts">
+              <li class="footer-contacts__el">443093 г. Самара ул. Ново-Садовая д. 38 о. 9</li>
+              <li class="footer-contacts__el"><a href="mailto:info@blackboxexpo.ru">info@blackboxexpo.ru</a></li>
+              <li class="footer-contacts__el">+7 (927) 999-99-99</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-in">
+            <h2 class="footer__head">Социальные сети</h2>
+            <ul class="footer-socials">
+              <li class="footer-socials__el"><a><i class="white fa fa-vk"></i><i class="black fa fa-vk"></i></a></li>
+              <li class="footer-socials__el"><a><i class="white fa fa-facebook"></i><i class="black fa fa-facebook"></i></a></li>
+              <li class="footer-socials__el"><a><i class="white fa fa-instagram"></i><i class="black fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="assets/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd7-MWvC-Wv-ds3IZ9v26KiQK9kjW5lRM&amp;callback=initMap"></script>
+  </body>
+</html>

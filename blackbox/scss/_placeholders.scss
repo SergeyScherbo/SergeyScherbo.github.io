@@ -1,0 +1,61 @@
+%fs0 {
+	font-size: 0;
+}
+
+%fs1 {
+	font-size: 1rem;
+}
+
+%ib {
+	display: inline-block;
+}
+
+%trs {
+	transition: .3s;
+}
+
+%tac {
+	text-align: center;
+}
+
+%tal {
+	text-align: left;
+}
+
+.page-head {
+	margin: 50px auto !important;
+	text-align: center;
+}
+
+.head_lvl1 {
+	font-size: 2.2857rem;
+	color: $black;
+}
+
+.text {
+	line-height: 1.5;
+	&_lt {
+		color: $text-lt;
+	}
+
+	&_dk {
+		color: $black;
+	}
+
+	&_big {
+		font-size: 1.2857rem;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+}
+
+.content {
+	margin-bottom: 100px;
+}
+
+.intro-outer,
+.contacts-page {
+	margin-bottom: 0;
+}

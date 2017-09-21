@@ -1,0 +1,107 @@
+.footer {
+    padding: 50px 0;
+    background-color: $black;
+    color: #fff;
+
+    &__col {
+        @include col(4);
+        @extend %tac;
+
+        &-in {
+            @extend %tal;
+            display: inline-block;
+        }
+    }
+
+    &__head {
+        margin-bottom: 25px;
+    }
+
+    &-nav {
+
+        &__el {
+            list-style: square;
+            &:not(:last-of-type) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    &-contacts {
+        &__el {
+            &:not(:last-of-type) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    &-socials {
+        @extend %fs0;
+        &__el {
+            @extend %ib;
+
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
+
+            a {
+                @extend %tac;
+                @extend %trs;
+                position: relative;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 1.25rem;
+                background-color: lighten($black, 5%);
+                overflow: hidden;
+
+                .black {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 10px;
+                    color: $black;
+                    transform: translateY(-200%);
+                }
+
+                .black,
+                .white {
+                    @extend %trs;
+                }
+
+                &:hover {
+                    background-color: #fff;
+
+                    .black {
+                        transform: translateY(0);
+                    }
+
+                    .white {
+                        transform: translateY(200%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__col {
+            @include col(12);
+            text-align: left;
+
+            &:not(:last-of-type) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &-nav {
+            padding-left: 0;
+
+            &__el {
+                list-style: none;
+            }
+        }
+    }
+}
