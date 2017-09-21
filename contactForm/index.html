@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Contact Form</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="form-message"></div>
+
+    <div class="contact-form">
+        <h2>Please, contact us!</h2>
+        <form id="ajax-contact" method="post" action="mailer.php">
+            <input id="name" type="name" name="name" placeholder="Name">
+            <input id="email" type="email" name="email" placeholder="E-mail">
+            <textarea placeholder="Message"></textarea>
+            <button id="sent">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

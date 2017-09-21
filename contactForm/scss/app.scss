@@ -1,0 +1,94 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    background-color: deepskyblue;
+}
+
+.contact-form {
+    width: 450px;
+    margin: 150px auto;
+    padding: 50px 25px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+
+    h2 {
+        margin: 0;
+        margin-bottom: 30px;
+        color: #555;
+    }
+}
+
+#ajax-contact {
+    input,
+    textarea {
+        display: block;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 10px;
+        outline: none;
+        border-radius: 3px;
+        border: 1px solid #eee;
+        font-family: 'Open Sans';
+        font-size: 1rem;
+        resize: none;
+
+        &::placeholder {
+            color: #aaa;
+        }
+    }
+
+    input {
+        height: 40px;
+        line-height: 38px;
+        padding: 0 15px;
+    }
+
+    textarea {
+        height: 150px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    #sent {
+        background-color: deepskyblue;
+        border: none;
+        outline: none;
+        padding: 10px 50px;
+        border-radius: 3px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.form-message {
+    position: absolute;
+    background-color: #eee;
+    min-height: 200px;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 50%;
+    margin-top: -100px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.error,
+.success {
+    opacity: 1;
+    visibility: visible;
+}
