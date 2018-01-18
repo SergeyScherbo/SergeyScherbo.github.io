@@ -1,0 +1,201 @@
+.tabs {
+  position: relative;
+  min-height: 500px;
+  margin-top: -100px;
+  background-image: linear-gradient(fade-out($purple, .5), $purple 50%);
+}
+
+.tabs-controls {
+  @extend %df;
+  position: absolute;
+  bottom: 100%;
+}
+
+.tab-ctrl {
+  @extend %fwb;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 45px;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 3px 0 0 $blue, -3px 0 0 $blue, 0 3px 0 $blue, 0 -3px 0 $blue, 2px 2px 0 $blue, -2px -2px 0 $blue, -2px 2px 0 $blue, 2px -2px 0 $blue;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .tab-ctrl {
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .tab-ctrl {
+    padding: 0 17px;
+    font-size: 1.25rem;
+  }
+}
+
+.first_active {
+  background-color: fade-out($purple, .5);
+  text-shadow: none;
+  color: $blue;
+}
+
+.tabs-elements {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.tab-el {
+  min-height: 200px;
+  display: none;
+
+  &:first-of-type {
+    display: block;
+  }
+}
+
+.inner-tabs {
+  @extend %df;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-tabs {
+    display: block;
+  }
+}
+
+.inner-controls {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-controls {
+    margin-right: 0;
+  }
+}
+
+.inner-ctrl {
+  @extend %ttu;
+  @extend %fwb;
+  min-width: 280px;
+  height: 63px;
+  line-height: 61px;
+  padding-left: 15px;
+  border-top: 1px solid $blue;
+  border-left: 1px solid $blue;
+  border-right: 1px solid $blue;
+  cursor: pointer;
+
+  &:first-of-type {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid $blue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .inner-ctrl {
+    min-width: 200px;
+    text-transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-ctrl {
+    height: 40px;
+    line-height: 38px;
+  }
+}
+
+.second_active {
+  background-color: $yellow;
+}
+
+.inner-elements {
+  margin-top: 15px;
+  color: $blue;
+}
+
+@media screen and (max-width: 768px) {
+  .inner-elements {
+    margin-top: 30px;
+  }
+}
+
+.inner-el {
+  display: none;
+
+  &:first-of-type {
+    display: block;
+  }
+}
+
+.data-theme {
+  @extend %fwb;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.data-posted {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.info-text {
+  @extend %fwb;
+  line-height: 2;
+}
+
+.info-text-ty {
+  margin: 70px 0;
+}
+
+.info-heading {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.changelog-outer {
+  @extend %fwb;
+  max-width: 500px;
+  margin-top: 15px;
+  border: 1px solid #eee;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .changelog-outer {
+    max-width: 100%;
+  }
+}
+
+.changelog-heading {
+  padding: 25px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  background-color: #f7f7f7;
+}
+
+.changelog {
+  padding: 10px 10px 40px;
+  background-color: #fff;
+}
+
+.changelog-info {
+  margin-bottom: 50px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.changelog-text {
+  line-height: 1.3;
+}
